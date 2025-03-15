@@ -49,43 +49,10 @@
 
         <section id="projects">
             <h2 class="projects-title">Projects</h2>
-            <div class="projects-container">
-        
-            <project-card title="Developer Journal"
-                          image="devjournal.jpeg"
-                          alt="Screenshot of Developer Journal"
-                          description="Developed a streamlined and user-friendly journaling tool tailored for developers, enabling them to efficiently manage deadlines and daily tasks."
-                          link="https://github.com/cse110-sp24-group33/cse110-sp24-group33">
-            </project-card>
-        
-            <project-card title="SHA-256 Hardware Implementation"
-                          image="sha256.jpeg"
-                          alt="SHA-256 Hardware Design"
-                          description="Designed and implemented a SHA-256 hashing algorithm in SystemVerilog, ensuring efficient hardware acceleration."
-                          link="https://github.com/a6srivastava/cse141L_processor">
-            </project-card>
-        
-            <project-card title="Custom CPU Design"
-                          image="cpudesign.png"
-                          alt="Custom CPU Design"
-                          description="Developed a custom processor architecture in SystemVerilog, implementing an accumulator-based ISA."
-                          link="https://github.com/a6srivastava/cse141L_processor">
-            </project-card>
-        
-            <project-card title="Recommender System (Machine Learning)"
-                          image="recomendationsystem.jpg"
-                          alt="Recommender System"
-                          description="Built an ML-based recommendation system for predicting user-book interactions, leveraging SVD, Jaccard similarity, and Logistic Regression."
-                          link="https://github.com/cse110-sp24-group33/cse110-sp24-group33">
-            </project-card>
-        
-            <project-card title="UART Communication System"
-                          image="uart.png"
-                          alt="UART System"
-                          description="Developed a UART Transmitter-Receiver system in SystemVerilog, implementing a handshake synchronizer for reliable data transfer."
-                          link="https://github.com/a6srivastava/cse141L_processor">
-            </project-card>
-        </section>
+            <button id="load-local">Load Local</button>
+            <button id="load-remote">Load Remote</button>
+            <div class="projects-container"></div> <!-- This is where JS will insert project cards -->
+        </section>        
         
         
         <section id="experience">
@@ -153,6 +120,8 @@
     <script src="form-validation.js" defer></script>
     <script src="theme.js" defer></script>
     <script src="project-card.js" defer></script>
+    <script src="data-loader.js" defer></script>
+
 
 
 </body>
