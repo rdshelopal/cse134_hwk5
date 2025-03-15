@@ -178,7 +178,8 @@ input:required:valid, textarea:required:valid {
     border: 2px solid green;
     background-color: #e6ffe6;
    } 
-   #projects {
+
+  /* #projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -188,6 +189,36 @@ input:required:valid, textarea:required:valid {
 
 project-card {
     max-width: 350px;
+}
+    */
+.projects-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 1000px; /* Adjust based on preference */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Ensure 3 in the first row, 2 in the second row */
+@media (min-width: 800px) {
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+    .projects-container project-card:nth-child(4),
+    .projects-container project-card:nth-child(5) {
+        grid-column: span 1;
+    }
 }
 
 }

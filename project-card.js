@@ -20,12 +20,14 @@ class ProjectCard extends HTMLElement {
                 :host(:hover) {
                     transform: scale(1.05);
                 }
-                h2 {
-                    font-size: 1.5em;
-                    margin: 0;
+                 h2 {
+                    font-size: 1.2em;
+                    margin: 0 0 10px 0;
                 }
                 img {
-                    width: 100%;
+                    width: 100%;  /* Ensures image fills container */
+                    height: 200px; /* Set a fixed height */
+                    object-fit: cover; /* Crop and maintain aspect ratio */
                     border-radius: 4px;
                 }
                 p {
