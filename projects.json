@@ -11,7 +11,7 @@
         "image": "sha256.jpeg",
         "alt": "SHA-256 Hardware Design",
         "description": "Designed and implemented a SHA-256 hashing algorithm in SystemVerilog, ensuring efficient hardware acceleration.",
-        "link": "https://github.com/yourgithubusername"
+        "link": "https://github.com/cse110-sp24-group33/cse110-sp24-group33"
     },
     {
         "title": "Custom CPU Design",
@@ -25,13 +25,13 @@
         "image": "recommender.jpg",
         "alt": "Recommender System",
         "description": "Built an ML-based recommendation system for predicting user-book interactions, leveraging SVD, Jaccard similarity, and Logistic Regression.",
-        "link": "https://github.com/yourgithubusername"
+        "link": "https://github.com/a6srivastava/cse141L_processor"
     },
     {
         "title": "UART Communication System",
         "image": "uart.png",
         "alt": "UART System",
         "description": "Developed a UART Transmitter-Receiver system in SystemVerilog, implementing a handshake synchronizer for reliable data transfer.",
-        "link": "https://github.com/yourgithubusername"
+        "link": "https://github.com/a6srivastava/cse141L_processor"
     }
 ]
