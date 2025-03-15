@@ -1,0 +1,157 @@
+ <!--head contains all content that wont be shown to the user-->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Portfolio</title>
+     <!-- Fallback for no JavaScript -->
+     <noscript>
+        <style>
+            #theme-toggle {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+<body>                  
+
+    <header class="headerclass">    
+        <nav class="navigation">
+            <button><a href="index.html"> Home</a></button>
+            <button><a href="#projects">Projects</a></button>
+            <button><a href="#experience">Experience</a></button>
+            <button><a href="#contact">Contact</a></button>           
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+            🌞 / 🌜
+        </button>
+        <h1>Ryandeep Shelopal</h1>
+        <h2>Computer Engineer</h2>
+    </header>
+
+    <main class="mainclass">
+        <section>
+            <h2>About Me</h2>
+            <div class="aboutmeclass">
+                <figure>
+                    <img src="mee.jpg" alt="Placeholder image" class="profilepicture">
+                </figure>
+                <p>Hey there! I'm Ryan, a Computer Engineering student at UCSD, graduating in June 2025. This portfolio is
+                     a showcase of my journey in software development, embedded systems, and machine learning, along with my latest 
+                     dive into frontend web development. I’m always looking to push my skills further, whether it's optimizing low-level 
+                     hardware performance, improving machine learning models, or crafting intuitive web experiences. Feel free to 
+                     explore, and don’t hesitate to reach out!</p>
+             </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+        
+            <project-card title="Developer Journal"
+                          image="journal.png"
+                          alt="Screenshot of Developer Journal"
+                          description="Developed a streamlined and user-friendly journaling tool tailored for developers, enabling them to efficiently manage deadlines and daily tasks."
+                          link="https://github.com/cse110-sp24-group33/cse110-sp24-group33">
+            </project-card>
+        
+            <project-card title="SHA-256 Hardware Implementation"
+                          image="sha256.png"
+                          alt="SHA-256 Hardware Design"
+                          description="Designed and implemented a SHA-256 hashing algorithm in SystemVerilog, ensuring efficient hardware acceleration."
+                          link="https://github.com/yourgithubusername">
+            </project-card>
+        
+            <project-card title="Custom CPU Design"
+                          image="cpu.png"
+                          alt="Custom CPU Design"
+                          description="Developed a custom processor architecture in SystemVerilog, implementing an accumulator-based ISA."
+                          link="https://github.com/a6srivastava/cse141L_processor">
+            </project-card>
+        
+            <project-card title="Recommender System (Machine Learning)"
+                          image="recommender.png"
+                          alt="Recommender System"
+                          description="Built an ML-based recommendation system for predicting user-book interactions, leveraging SVD, Jaccard similarity, and Logistic Regression."
+                          link="https://github.com/yourgithubusername">
+            </project-card>
+        
+            <project-card title="UART Communication System"
+                          image="uart.png"
+                          alt="UART System"
+                          description="Developed a UART Transmitter-Receiver system in SystemVerilog, implementing a handshake synchronizer for reliable data transfer."
+                          link="https://github.com/yourgithubusername">
+            </project-card>
+        </section>
+        
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            <table>
+                 <!--<caption>Work Experience</caption>-->
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>Underwriter's Laboratories</td>
+                    <td>Wireless Product Testing</td>
+                    <td>2019</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Info</h2>
+            <address>
+                Email: <a href="mailto:someone@example.com">rdshelopal@gmail.com</a><br>
+                GitHub: <a href="https://github.com/rdshelopal">GitHub</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/ryan-shelopal/">LinkedIn</a>
+            </address>
+        </section>
+        
+        <footer>
+            <form action="https://httpbin.org/post" method="POST" novalidate onsubmit="alert('Thank You for Submitting!')">
+
+                <!-- Name Field with required attribute and output elements for errors -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required minlength="2" maxlength="50">
+                <output class="error" aria-live="polite"></output>
+                <output class="info" aria-live="polite"></output>
+        
+                <!-- Email Field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <output class="error" aria-live="polite"></output>
+                <output class="info" aria-live="polite"></output>
+        
+                <!-- Comment Section -->
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Your message here" required minlength="10" maxlength="500"></textarea>
+                <output class="error" aria-live="polite"></output>
+                <output class="info" aria-live="polite"></output>
+        
+                <!-- Hidden Field for Bot Detection -->
+                <input type="hidden" name="possible_bot" value="true">
+
+                <!-- Hidden Field for Form Errors -->
+                <input type="hidden" name="form_errors" id="form_errors">
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+
+
+            </form>
+        
+            <hr>
+            <p>&copy; 2025 Ryandeep Shelopal</p>
+    </main>
+    <script src="form-validation.js" defer></script>
+    <script src="theme.js" defer></script>
+    <script src="project-card.js" defer></script>
+
+
+</body>
