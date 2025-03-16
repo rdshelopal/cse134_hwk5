@@ -86,14 +86,32 @@ input:required:valid, textarea:required:valid {
         margin: 0 auto;
         
         button{
-            padding: 1.5rem;
-            
-            background: var(--secondary-color);
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            background: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
+    }
+    .navigation button a {
+        text-decoration: none; /* Remove underline */
+        color: white; /* Match Load buttons */
+        font-weight: bold; /* Match font weight */
+        font-size: 1rem; /* Match size */
+        display: flex; /* Ensure text is centered */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: transparent; /* Remove unwanted background */
     }
 
     .navigation button:hover{
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
 
     }
     .homebutton{
@@ -157,9 +175,25 @@ input:required:valid, textarea:required:valid {
 
     section{
         border: 1px solid black;
-        h2{
-            width: 97%;
-            margin: auto;
+        border: 2px solid black; /* Make sure all sections have defined borders */
+        margin: 10px 0; /* Ensure some space between sections */
+        padding: 15px; /* Add padding to prevent content from touching the border */
+        box-sizing: border-box; /* Ensures padding doesn’t affect width */
+        h2, .projects-title{
+            /*width: 97%;*/
+            /*text-align: left; /* Align text to the left */
+           /* width: 100%;
+            margin: auto; /* Adds spacing from the top & left */
+           /* font-size: 1.8rem; /* Adjust size for consistency */
+            /*font-weight: bold;
+            padding:5px;*/
+            
+            text-align: left; /* Align to the left */
+            width: 100%;
+            margin: 10px 0 15px 10px; /* Adds spacing from the top & left */
+            font-size: 1.8rem; /* Keep consistent size */
+            font-weight: bold;
+        
         }
     }
 
@@ -168,6 +202,8 @@ input:required:valid, textarea:required:valid {
     flex-direction: column;
     border: 1px solid black;
    }
+
+   
 
    input:required:invalid, textarea:required:invalid {
     border: 2px solid red;
@@ -220,6 +256,30 @@ project-card {
         grid-column: span 1;
     }
 }
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns buttons to the left */
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px; /* Adjust spacing from the left */
+}
+.button-container button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background: var(--secondary-color);
+}
+
 
 }
 
